@@ -12,6 +12,9 @@ html {
     line-height: 1.5;
     tab-size: 4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
@@ -44,6 +47,56 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 128px;
+}
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: blueviolet;
+}
+
+.menu__backdrop {
+    background-color: white;
+    position: absolute;
+    border: 1px solid lightgray;
+    top: 0;
+    margin: 8px 16px 0 8px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.menu--open .menu__backdrop {
+    display: flex;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: black;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    color: black;
+    font-size: 24px;
 }
 
 ul {
@@ -319,9 +372,22 @@ img, video {
 
 /* PLANS */
 
+.plan__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.plan__description--para {
+    width: 50%;
+    text-align: center;
+}
+
 .plans {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .plan {
@@ -635,12 +701,31 @@ img, video {
         width: 60%;
     } */
 
-    .nav__links {
+    .row__media--box {
+        display: flex;
+        flex-direction: row;
+        padding-top: 128px;
+    }
+
+    .row__half--box {
+        width: 35%;
+    }
+
+    .row__half--box--right {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .page__links {
+        display: none;
         padding-bottom: 0px;
     }
 
     li {
-        display: none
+        /* display: none */
     }
 
     .header__title {
@@ -648,6 +733,8 @@ img, video {
         width: 100%;
         max-width: 1200px;
     }
+
+   
 
     .trusted__customers--para{
         text-align: center;
@@ -675,11 +762,11 @@ img, video {
         width: 50%;
     }
 
-    .row__media--box {
+    /* .row__media--box {
         display: flex;
         flex-direction: row;
         padding-top: 128px;
-    }
+    } */
 
     h3 {
         font-size: 14px;
@@ -704,15 +791,15 @@ img, video {
         padding-top: 24px;
     }
 
-    .row__half--box {
+    /* .row__half--box {
         width: 35%;
-    }
-    .row__half--box--right {
+    } */
+    /* .row__half--box--right {
         width: 65%;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+    } */
     html {
         padding: 24px;
     }
@@ -720,12 +807,12 @@ img, video {
     .row__half--box {
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
     }
 
-    .row__half--box--right {
+    /* .row__half--box--right {
         text-align: left;
-    }
+    } */
 
     .title--gray {
         font-size: 36px;
@@ -756,5 +843,102 @@ img, video {
         height: 50px;
         width: 100%;
         border-radius: 50%;
+    }
+
+    /* VALUES */ 
+
+    .font__principle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;       
+    }
+
+    .principles__para {
+        width: 300px;
+    }
+
+
+    /* PLANS */
+
+    .plans {
+        margin-top: 48px;
+    }
+
+    .plan__header {
+        margin-bottom: 0;
+        margin-top: 128px;
+    }
+
+    .plan {
+        width: calc(50% /1);
+        margin-bottom: 48px;
+    }
+
+    .mobile__separator {
+        height: 225vh;
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonial__people--info {
+        display: flex;
+
+    }
+
+    .media__alternator {
+        width: 40%;
+    }
+
+    .testimonial__people--info {
+        flex-direction: column;
+    }
+
+    .faq__subtitle {
+        text-align: center;
+    }
+    .row__header {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 390px){
+
+    html {
+        right: 0;
+    }
+
+    .menu__backdrop {
+        margin-right: 0;
+    }
+    
+    .template__form {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .template__btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 24px;
+        width: 100%;
+    }
+
+    /* FEATURES */
+
+    .service {
+        width: calc(100% / 1);
+    }
+    .section__separator {
+        width: 100vw;
+    }
+
+    .row__media--box {
+        margin-top: 480px;
     }
 }

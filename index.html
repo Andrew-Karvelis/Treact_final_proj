@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
 
     <title>Treact Final Project</title>
   </head>
@@ -30,13 +31,39 @@
             <a href="#signup" class="page__link page__link--primary">Sign Up</a>
           </li>
         </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="" class="menu__link">About</a>
+              </li>
+              <li class="menu__list">
+                <a href="" class="menu__link">Blog</a>
+              </li>
+              <li class="menu__list">
+                <a href="" class="menu__link">Pricing</a>
+              </li>
+              <li class="menu__list">
+                <a href="" class="menu__link">Contact Us</a>
+              </li>
+              <li class="menu__list">
+                <a href="" class="menu__link">Login</a>
+              </li>
+            </ul>
+          
+        </div>
       </nav>
     </div>
 
     <!-- HEADER -->
     <section class="section__separator">
       <div class="row row__two--box">
-        <div class="row row__small">
+        <div class="row row__small row__header">
           <h1 class="header__title">
             Beautiful React Templates <span class="text--purple">for you.</span>
           </h1>
@@ -46,7 +73,7 @@
           </p>
           <form action="" class="template__form">
             <input type="email" placeholder="Your E-mail Address" />
-            <button class="generic__btn--purple">Get Started</button>
+            <button class="generic__btn--purple template__btn">Get Started</button>
           </form>
           <figure class="trusted__customers">
             <p class="trusted__customers--para">OUR TRUSTED CUSTOMERS</p>
@@ -188,10 +215,10 @@
           </figure>
         </div>
         <div class="row row__half--box--right">
-            <h3 class="text--purple">STEPS</h3>
-            <h1 class="service__title">
-              Easy to <span class="text--purple">Get Started.</span>
-            </h1>
+          <h3 class="text--purple">STEPS</h3>
+          <h1 class="service__title">
+            Easy to <span class="text--purple">Get Started.</span>
+          </h1>
           <div class="get__started--wrapper">
             <h2 class="title--gray">01</h2>
             <div class="get__started--description">
@@ -284,8 +311,18 @@
 
     <!-- PLANS -->
 
-    <section class="section__separator">
+    <section class="section__separator mobile__separator">
       <div class="row">
+        <div class="plan__header">
+          <h3 class="text--purple">PRICING</h3>
+          <h1 class="service__title">
+            Reasonable & Flexible <span class="text--purple">Plans.</span>
+          </h1>
+          <p class="plan__description--para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam a
+            alias perferendis earum, repellat dicta fugit eveniet deserunt enim?
+          </p>
+        </div>
         <div class="plans">
           <div class="plan plan__personal">
             <div class="banner banner__green"></div>
@@ -337,8 +374,8 @@
     </section>
 
     <section class="section__separator">
-      <div class="row row__two--box">
-        <div class="row row__large">
+      <div class="row row__two--box row__media--box">
+        <div class="row row__large media__alternator">
           <figure>
             <img
               src="./assets/love-illustration.svg"
@@ -353,10 +390,8 @@
             Our Clients <span class="text--purple">Love Us.</span>
           </h1>
           <p class="testimonial__heading">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            minima ut voluptates, culpa qui libero iure quis quam? Omnis nemo
-            placeat aliquid labore, cumque alias fugit quas ut laborum
-            architecto!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            molestias consectetur est iste!
           </p>
           <div class="testimonial__description--wrapper">
             <i class="fas fa-star"></i>
@@ -374,6 +409,7 @@
               quos!
             </p>
             <div class="testimonial__people">
+              <div class="testimonial__people--info">
               <figure>
                 <img
                   src="./assets/photo-adam.avif"
@@ -381,6 +417,9 @@
                   alt=""
                 />
               </figure>
+              <h2>Adam Cuppy</h2>
+              <p>Founder, EventsNYC</p>
+            </div>
               <div class="testimonial__nav">
                 <button class="testimonial__nav--btn">
                   <i class="fas fa-arrow-left"></i>
@@ -399,7 +438,7 @@
     <!-- FAQS -->
     <section class="section__separator">
       <div class="row row__FAQ">
-        <h3 class="text--purple">FAQS</h3>
+        <h3 class="text--purple faq__subtitle">FAQS</h3>
         <h1 class="header__title">
           You have <span class="text--purple">Questions ?</span>
         </h1>
