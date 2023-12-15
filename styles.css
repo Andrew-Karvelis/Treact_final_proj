@@ -1,5 +1,3 @@
-
-
 /* GENERICS */
 * {
     margin: 0;
@@ -21,10 +19,6 @@ h2 {
     font-size: 36px;
 }
 
-/* .container {
-    padding: 80px 0;
-} */
-
 .row {
     width: 100%;
     max-width: 1200px;
@@ -32,8 +26,7 @@ h2 {
 }
 
 .section__separator {
-    /* margin: 128px 0; */
-    height: 70vh;
+    height: 100vh;
 }
 
 a {
@@ -55,6 +48,7 @@ nav {
     text-align: center;
     border: none;
     color: blueviolet;
+    display: none;
 }
 
 .menu__backdrop {
@@ -253,7 +247,7 @@ img, video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 36px;
+    padding-bottom: 64px;
 }
 
 .service__title {
@@ -624,9 +618,12 @@ img, video {
 .row__footer {
     background-color: blueviolet;
     height: 50vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    bottom: 0;
+    right: 0;
 }
 
 .links {
@@ -687,11 +684,16 @@ img, video {
 }
 
 
+/* TABLETS */
 @media (max-width: 768px) {
     .row {
         display: flex;
         flex-direction: column;
         text-align: center;
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 12px;
     }
 
     .row__small {
@@ -708,11 +710,11 @@ img, video {
     }
 
     .row__half--box {
-        width: 35%;
+        width: 50%;
     }
 
     .row__half--box--right {
-        width: 65%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -728,10 +730,17 @@ img, video {
         /* display: none */
     }
 
+    .btn__menu {
+        display: block;
+    }
+
     .header__title {
         font-size: 24px;
         width: 100%;
-        max-width: 1200px;
+    }
+
+    .header__img--wrapper {
+        width: 65%;
     }
 
    
@@ -745,12 +754,22 @@ img, video {
     }
 
     .section__separator {
-        height: 80vh;
+        /* height: 80vh; */
     }
 
     .service {
         width: calc(100% / 2);
         padding-bottom: 48px;
+        padding-left: 36px;
+    }
+
+    .service__title {
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .service__img--border {
+        margin-right: 0;
     }
 
     h2 {
@@ -760,6 +779,7 @@ img, video {
     .service__description {
         text-align: left;
         width: 50%;
+        padding-left: 12px;
     }
 
     /* .row__media--box {
@@ -781,11 +801,7 @@ img, video {
         text-align: left;
     }
 
-    .service__title {
-        font-size: 26px;
-        text-align: left;
-    }
-
+    
     .quality__work--para{
         text-align: left;
         padding-top: 24px;
@@ -800,10 +816,6 @@ img, video {
         justify-content: center;
         align-items: center;
     } */
-    html {
-        padding: 24px;
-    }
-
     .row__half--box {
         display: flex;
         justify-content: center;
@@ -903,18 +915,17 @@ img, video {
         text-align: center;
     }
 
+    .section__separator--FAQ {
+        height: 50vh;
+    }
+
+    .get__started--block {
+        margin-bottom: 48px;
+    }
+
 }
 
-@media (max-width: 390px){
-
-    html {
-        right: 0;
-    }
-
-    .menu__backdrop {
-        margin-right: 0;
-    }
-    
+@media (max-width: 690px){
     .template__form {
         flex-direction: column;
         position: relative;
@@ -928,17 +939,85 @@ img, video {
         margin-top: 24px;
         width: 100%;
     }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 390px){
+
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+
+    .header__title {
+        /* text-align: center; */
+        /* max-width: 250px; */
+    }
+
+    nav {
+        padding-bottom: 48px;
+    }
+
+    html {
+        right: 0;
+    }
+
+    .menu__backdrop {
+        margin-right: 0;
+    }
+
+    .section__separator {
+        height: 80vh;
+    }
+    
+    .template__form {
+        flex-direction: column;
+        position: relative;
+
+    }
+
+    .template__btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 24px;
+        width: 100%;
+    }
 
     /* FEATURES */
-
     .service {
         width: calc(100% / 1);
-    }
-    .section__separator {
-        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding: 2rem;
     }
 
-    .row__media--box {
-        margin-top: 480px;
+    .service__description {
+        text-align: center;
     }
+
+    .service__title {
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .service__para {
+        width: 100%;
+        max-width: 350px;
+        padding-top: 12px;
+    }
+
 }
